@@ -14,3 +14,4 @@ public class NetflixAccountEntity {
     private NetflixAccountEntity User;
 
 }
+  
