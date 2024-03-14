@@ -10,8 +10,8 @@ public class NetflixAccountEntity {
     @Column(name="ID") private long ID;
     @Column(name="nb_devices") private Integer nb_devices;
     @Column(name="typeAccount") @Enumerated(EnumType.ORDINAL)private typeAccount type_Account;
-    @OneToOne(mappedBy = "uuid")
-    private NetflixAccountEntity User;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private NetflixUserEntity user;
 
 }
-  

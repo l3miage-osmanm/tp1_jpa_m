@@ -12,6 +12,7 @@ public class Session {
     @Column(name="lock") private Boolean lock;
     @Column(name="cuurentDir") private String currentDir;
     @Column(name="lastCommand") private String lastCommand;
-    @OneToOne(mappedBy = "idUser")
+
+    @OneToOne(mappedBy = "s")
     private User utilisateur;
 }
